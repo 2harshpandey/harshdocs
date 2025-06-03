@@ -1,94 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Secure Resources</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        background: #f5f5f5;
-        text-align: center;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Resources</title>
+  <style>
+    :root {
+      --yt-red: #ff0000;
+      --cp-green: #28a745;
+      --bg-light: #f9f9f9;
+      --text-dark: #1c1c1c;
+      --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
 
-      h1 {
-        font-size: 2.2rem;
-        margin-bottom: 10px;
-      }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
 
-      p {
-        font-size: 1rem;
-        margin-bottom: 30px;
-        color: #444;
-      }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
 
-      .button-container {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        width: 90%;
-        max-width: 400px;
+    p {
+      font-size: 1rem;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .group-box {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: var(--box-shadow);
+      width: 100%;
+      max-width: 420px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 16px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+    }
+
+    .yt-btn {
+      background-color: var(--yt-red);
+      color: white;
+    }
+
+    .cp-btn {
+      background-color: var(--cp-green);
+      color: white;
+    }
+
+    button:hover {
+      opacity: 0.95;
+      transform: scale(1.02);
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (min-width: 600px) {
+      .button-group {
+        flex-direction: row;
       }
 
       button {
-        padding: 14px;
-        font-size: 1rem;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
+        width: auto;
+        flex: 1;
       }
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome</h1>
+  <p>Select a resource to open:</p>
 
-      .docs-btn {
-        background-color: #4caf50;
-        color: white;
-      }
-
-      .yt-btn {
-        background-color: #ff0000;
-        color: white;
-      }
-
-      button:hover {
-        transform: scale(1.03);
-        opacity: 0.9;
-      }
-
-      @media (min-width: 600px) {
-        .button-container {
-          flex-direction: row;
-          justify-content: center;
-        }
-
-        button {
-          flex: 1;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Welcome</h1>
-    <p>Select a resource to open:</p>
-    <div class="button-container">
-      <button
-        class="docs-btn"
-        onclick="window.open('https://cryptpad.fr/drive/#/2/drive/view/s31ROeWEVg0ObdZpc52omeKhefkuQVHre96k+QcRkOw/p/', '_blank')"
-      >
-        Go to Harsh Docs
+  <!-- YouTube Group -->
+  <div class="group-box">
+    <h2>YouTube Resources</h2>
+    <div class="button-group">
+      <button class="yt-btn" onclick="window.location.href='https://www.youtube.com/playlist?list=PLtqCjZrUdnGuwtBWOBNyUPkoPmDN_1Qst'">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M10 15l5.2-3L10 9v6zm12-3c0-1.2-.2-2.3-.6-3.4-.4-1-1.3-1.9-2.3-2.3C17.3 6 12 6 12 6s-5.3 0-7.1.3c-1 .4-1.9 1.3-2.3 2.3C2.2 9.7 2 10.8 2 12s.2 2.3.6 3.4c.4 1 1.3 1.9 2.3 2.3 1.8.3 7.1.3 7.1.3s5.3 0 7.1-.3c1-.4 1.9-1.3 2.3-2.3.4-1.1.6-2.2.6-3.4z"/></svg>
+        View Playlist
       </button>
-      <button
-        class="yt-btn"
-        onclick="window.open('https://www.youtube.com/playlist?list=PLtqCjZrUdnGuwtBWOBNyUPkoPmDN_1Qst', '_blank')"
-      >
-        Go to YouTube Playlist
+      <button class="yt-btn" onclick="window.location.href='https://www.youtube.com/playlist?list=PLtqCjZrUdnGuwtBWOBNyUPkoPmDN_1Qst&jct=h-rUyAonrIuAEJT9BfoNdg'">
+        <svg viewBox="0 0 24 24" fill="white"><path d="M10 15l5.2-3L10 9v6zm12-3c0-1.2-.2-2.3-.6-3.4-.4-1-1.3-1.9-2.3-2.3C17.3 6 12 6 12 6s-5.3 0-7.1.3c-1 .4-1.9 1.3-2.3 2.3C2.2 9.7 2 10.8 2 12s.2 2.3.6 3.4c.4 1 1.3 1.9 2.3 2.3 1.8.3 7.1.3 7.1.3s5.3 0 7.1-.3c1-.4 1.9-1.3 2.3-2.3.4-1.1.6-2.2.6-3.4z"/></svg>
+        Collaborator Link
       </button>
     </div>
-  </body>
+  </div>
+
+  <!-- CryptPad Button -->
+  <div class="group-box">
+    <h2>Secure Document</h2>
+    <button class="cp-btn" onclick="window.location.href='https://cryptpad.fr/drive/#/2/drive/view/s31ROeWEVg0ObdZpc52omeKhefkuQVHre96k+QcRkOw/p/'">
+      <svg viewBox="0 0 24 24" fill="white"><path d="M12 2L1.5 9l2 1.5L12 4l8.5 6.5 2-1.5L12 2zm0 6L3 13v7h6v-5h6v5h6v-7l-9-5z"/></svg>
+      Go to Harsh Docs
+    </button>
+  </div>
+</body>
 </html>
