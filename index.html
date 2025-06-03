@@ -1,10 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta http-equiv="refresh" content="0; url=https://cryptpad.fr/drive/#/2/drive/view/s31ROeWEVg0ObdZpc52omeKhefkuQVHre96k+QcRkOw/p/" />
-    <title>Redirecting to Secure Docs</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure Resources</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #f5f5f5;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+        color: #444;
+      }
+
+      .button-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 90%;
+        max-width: 400px;
+      }
+
+      button {
+        padding: 14px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .docs-btn {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      .yt-btn {
+        background-color: #ff0000;
+        color: white;
+      }
+
+      button:hover {
+        transform: scale(1.03);
+        opacity: 0.9;
+      }
+
+      @media (min-width: 600px) {
+        .button-container {
+          flex-direction: row;
+          justify-content: center;
+        }
+
+        button {
+          flex: 1;
+        }
+      }
+    </style>
   </head>
   <body>
-    <p>Redirecting to your secure documents... If it doesn’t open, <a href="https://cryptpad.fr/drive/#/2/drive/view/s31ROeWEVg0ObdZpc52omeKhefkuQVHre96k+QcRkOw/p/">click here</a>.</p>
+    <h1>Welcome</h1>
+    <p>Select a resource to open:</p>
+    <div class="button-container">
+      <button
+        class="docs-btn"
+        onclick="window.open('https://cryptpad.fr/drive/#/2/drive/view/s31ROeWEVg0ObdZpc52omeKhefkuQVHre96k+QcRkOw/p/', '_blank')"
+      >
+        Go to Harsh Docs
+      </button>
+      <button
+        class="yt-btn"
+        onclick="window.open('https://www.youtube.com/playlist?list=PLtqCjZrUdnGuwtBWOBNyUPkoPmDN_1Qst', '_blank')"
+      >
+        Go to YouTube Playlist
+      </button>
+    </div>
   </body>
 </html>
