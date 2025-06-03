@@ -3,106 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Harsh Resources</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <title>Resource Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
     }
     body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: url('https://i.ibb.co/XftK1trp/Wallpaper-2.jpg') no-repeat center center fixed;
       background-size: cover;
       display: flex;
-      justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      justify-content: center;
+      height: 100vh;
     }
     .container {
-      background-color: rgba(0, 0, 0, 0.75);
+      background: rgba(0, 0, 0, 0.7);
       padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-      text-align: center;
-      max-width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
       width: 90%;
+      max-width: 600px;
+      text-align: center;
       color: #fff;
     }
     h1 {
       font-size: 2rem;
-      font-weight: 800;
       margin-bottom: 0.5rem;
     }
-    p.subtitle {
+    p {
       margin-bottom: 2rem;
+      font-size: 1rem;
       color: #ddd;
     }
     .section {
-      margin-bottom: 2rem;
-      padding: 1rem;
-      border-radius: 1rem;
-      background-color: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
     }
     .section h2 {
-      font-size: 1.2rem;
-      font-weight: 700;
+      margin-top: 0;
+      color: #fff;
+      font-size: 1.25rem;
       margin-bottom: 1rem;
     }
-    .buttons {
+    .button-group {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
+      gap: 0.75rem;
     }
     .btn {
       display: flex;
       align-items: center;
       gap: 0.5rem;
-      text-decoration: none;
-      color: #fff;
       padding: 0.6rem 1rem;
-      border-radius: 0.5rem;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      white-space: nowrap;
+      font-size: 0.95rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: white;
+      transition: background 0.3s ease;
     }
     .btn i {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
-    .btn:hover {
-      opacity: 0.85;
-      transform: scale(1.05);
-    }
-    .yt-btn { background-color: #FF0000; }
-    .doc-btn { background-color: #28a745; }
+    .yt { background-color: #FF0000; }
+    .yt:hover { background-color: #cc0000; }
+    .doc { background-color: #28a745; }
+    .doc:hover { background-color: #218838; }
+    .study { background-color: #007bff; }
+    .study:hover { background-color: #0056b3; }
+    .ent { background-color: #ffc107; color: #000; }
+    .ent:hover { background-color: #e0a800; }
     @media (max-width: 500px) {
-      .btn { width: 100%; justify-content: center; }
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Welcome</h1>
-    <p class="subtitle">Select a resource to open:</p>
+    <p>Select a resource to open:</p>
 
     <div class="section">
       <h2>YouTube Resources</h2>
-      <div class="buttons">
-        <a href="https://www.youtube.com/playlist?list=PLtqCjZrUdnGuwtBWOBNyUPkoPmDN_1Qst" class="btn yt-btn"><i class="fab fa-youtube"></i> Old Songs</a>
-        <a href="https://www.youtube.com/playlist?list=PLtqCjZrUdnGuwtBWOBNyUPkoPmDN_1Qst&jct=h-rUyAonrIuAEJT9BfoNdg" class="btn yt-btn"><i class="fas fa-user-friends"></i> Old Songs Collab</a>
-        <a href="https://www.youtube.com/playlist?list=PLtqCjZrUdnGvjatUB2UC0nJ3-hRmWW9e4&jct=4V55jyeBdcYK0WPOZ0mIvQ" class="btn yt-btn"><i class="fas fa-share-alt"></i> Me & Shirt Shared</a>
-        <a href="https://www.youtube.com/playlist?list=PLtqCjZrUdnGuNVQ5d_352-pMUlqg-PDpX" class="btn yt-btn"><i class="fas fa-heart"></i> Self-Help</a>
-        <a href="https://www.youtube.com/playlist?list=PLtqCjZrUdnGvui8_UYmrtAOk59-ZJuH1U" class="btn yt-btn"><i class="fas fa-laptop-code"></i> Computer Science</a>
+      <div class="button-group">
+        <button class="btn yt" onclick="location.href='https://www.youtube.com/playlist?list=PLtqCjZrUdnGuwtBWOBNyUPkoPmDN_1Qst'"><i class="fab fa-youtube"></i>Old Songs</button>
+        <button class="btn yt" onclick="location.href='https://www.youtube.com/playlist?list=PLtqCjZrUdnGuwtBWOBNyUPkoPmDN_1Qst&jct=h-rUyAonrIuAEJT9BfoNdg'"><i class="fab fa-youtube"></i>Old Songs Collab</button>
+        <button class="btn yt" onclick="location.href='https://www.youtube.com/playlist?list=PLtqCjZrUdnGvjatUB2UC0nJ3-hRmWW9e4&jct=4V55jyeBdcYK0WPOZ0mIvQ'"><i class="fab fa-youtube"></i>Me & Shirt</button>
+        <button class="btn yt" onclick="location.href='https://www.youtube.com/playlist?list=PLtqCjZrUdnGuNVQ5d_352-pMUlqg-PDpX'"><i class="fab fa-youtube"></i>Self-Help</button>
+        <button class="btn yt" onclick="location.href='https://www.youtube.com/playlist?list=PLtqCjZrUdnGvui8_UYmrtAOk59-ZJuH1U'"><i class="fab fa-youtube"></i>CS & Applications</button>
       </div>
     </div>
 
     <div class="section">
-      <h2>Secure Document</h2>
-      <div class="buttons">
-        <a href="https://cryptpad.fr/drive/#/2/drive/view/s31ROeWEVg0ObdZpc52omeKhefkuQVHre96k+QcRkOw/p/" class="btn doc-btn"><i class="fas fa-file-alt"></i> Go to Harsh Docs</a>
+      <h2>Documents</h2>
+      <div class="button-group">
+        <button class="btn doc" onclick="location.href='https://cryptpad.fr/drive/#/2/drive/view/s31ROeWEVg0ObdZpc52omeKhefkuQVHre96k+QcRkOw/p/'">
+          <i class="fas fa-file-alt"></i>Harsh Docs
+        </button>
+        <button class="btn doc" onclick="location.href='https://4gybdj-my.sharepoint.com/:f:/g/personal/nityanand_4gybdj_onmicrosoft_com/Eq97mcWpr3tNiEkYr9RKiFYBMXWBhuVyQl-r4E25LuKwcA?e=oAjs8t'">
+          <i class="fas fa-folder-open"></i>Other Docs
+        </button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Study</h2>
+      <div class="button-group">
+        <button class="btn study" onclick="location.href='https://4gybdj-my.sharepoint.com/:f:/g/personal/nityanand_4gybdj_onmicrosoft_com/Enc-7P9QCNFOkBzEvBkZYVUBaVN5Yx20LzeXnRzhssyVNw?e=rxcnbL'"><i class="fas fa-book"></i>Books</button>
+        <button class="btn study" onclick="location.href='https://4gybdj-my.sharepoint.com/:f:/g/personal/nityanand_4gybdj_onmicrosoft_com/EgFj6RsUb3ZHhZ6_8JaVtXYBQfxIY50dPn_35LcblAU_WA?e=jigzie'"><i class="fas fa-headphones"></i>Audiobooks</button>
+        <button class="btn study" onclick="location.href='https://4gybdj-my.sharepoint.com/:f:/g/personal/nityanand_4gybdj_onmicrosoft_com/EtWcxwlw0-xPuwGUOJfE8BgBVmXZWv8308f0fzjMq0MLfw?e=35KgNk'"><i class="fas fa-shield-alt"></i>CEH Course</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Entertainment</h2>
+      <div class="button-group">
+        <button class="btn ent" onclick="location.href='https://4gybdj-my.sharepoint.com/:f:/g/personal/nityanand_4gybdj_onmicrosoft_com/EoeCGV4DBRFGtMohsFNEwLsBXVM-qTpq87jS2691c_dPoQ?e=zTfTvj'"><i class="fas fa-play-circle"></i>Ample</button>
+        <button class="btn ent" onclick="location.href='https://4gybdj-my.sharepoint.com/:f:/g/personal/nityanand_4gybdj_onmicrosoft_com/EtpynUiFHQdKhPpbt4AJdS0BqDws2nlO8A-3J2idtXckHg?e=PIn0UX'"><i class="fas fa-play-circle"></i>Ample - 02</button>
       </div>
     </div>
   </div>
