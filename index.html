@@ -2,140 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Harsh's Resource Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harsh Resources</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    :root {
-      --yt-red: #ff0000;
-      --cp-green: #28a745;
-      --accent-blue: #007bff;
-      --text-light: #ffffff;
-      --overlay-dark: rgba(0, 0, 0, 0.6);
-    }
-
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
     }
-
     body {
-      background: url("https://i.ibb.co/XftK1trp/Wallpaper-2.jpg") no-repeat center center fixed;
+      background: url('https://i.ibb.co/XftK1trp/Wallpaper-2.jpg') no-repeat center center fixed;
       background-size: cover;
-      font-family: 'Segoe UI', sans-serif;
-      color: var(--text-light);
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      padding: 20px;
     }
-
-    .overlay {
-      background-color: var(--overlay-dark);
-      padding: 40px 30px;
-      border-radius: 20px;
+    .container {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 2rem;
+      border-radius: 1rem;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-      width: 100%;
-      max-width: 800px;
-    }
-
-    h1 {
       text-align: center;
-      margin-bottom: 30px;
-      font-size: 2.5rem;
+      max-width: 600px;
+      width: 90%;
+      color: #fff;
     }
-
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    p.subtitle {
+      margin-bottom: 2rem;
+      color: #ddd;
+    }
     .section {
-      margin-bottom: 35px;
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border-radius: 1rem;
+      background-color: rgba(255, 255, 255, 0.1);
     }
-
     .section h2 {
-      margin-bottom: 15px;
-      font-size: 1.5rem;
-      border-bottom: 2px solid var(--text-light);
-      padding-bottom: 5px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
     }
-
-    .link-group {
+    .buttons {
       display: flex;
-      flex-direction: column;
-      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
     }
-
-    .resource-link {
+    .btn {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 12px 16px;
-      border-radius: 8px;
+      gap: 0.5rem;
       text-decoration: none;
-      color: var(--text-light);
-      transition: background 0.3s ease;
+      color: #fff;
+      padding: 0.6rem 1rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      white-space: nowrap;
     }
-
-    .resource-link:hover {
-      background: rgba(255, 255, 255, 0.2);
+    .btn i {
+      font-size: 1.2rem;
     }
-
-    .resource-link span {
-      font-size: 1rem;
+    .btn:hover {
+      opacity: 0.85;
+      transform: scale(1.05);
     }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-      .section h2 {
-        font-size: 1.2rem;
-      }
-      .resource-link span {
-        font-size: 0.9rem;
-      }
+    .yt-btn { background-color: #FF0000; }
+    .doc-btn { background-color: #28a745; }
+    @media (max-width: 500px) {
+      .btn { width: 100%; justify-content: center; }
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <h1>Welcome to Harsh's Resource Hub</h1>
+  <div class="container">
+    <h1>Welcome</h1>
+    <p class="subtitle">Select a resource to open:</p>
 
     <div class="section">
-      <h2>Documents</h2>
-      <div class="link-group">
-        <a class="resource-link" href="https://cryptpad.fr/drive/#/2/drive/view/s31ROeWEVg0ObdZpc52omeKhefkuQVHre96k+QcRkOw/p/" target="_blank">
-          <span>Harsh Docs</span>
-        </a>
-        <a class="resource-link" href="https://4gybdj-my.sharepoint.com/:f:/g/personal/nityanand_4gybdj_onmicrosoft_com/Eq97mcWpr3tNiEkYr9RKiFYBMXWBhuVyQl-r4E25LuKwcA?e=oAjs8t" target="_blank">
-          <span>Other Documents</span>
-        </a>
+      <h2>YouTube Resources</h2>
+      <div class="buttons">
+        <a href="https://www.youtube.com/playlist?list=PLtqCjZrUdnGuwtBWOBNyUPkoPmDN_1Qst" class="btn yt-btn"><i class="fab fa-youtube"></i> Old Songs</a>
+        <a href="https://www.youtube.com/playlist?list=PLtqCjZrUdnGuwtBWOBNyUPkoPmDN_1Qst&jct=h-rUyAonrIuAEJT9BfoNdg" class="btn yt-btn"><i class="fas fa-user-friends"></i> Old Songs Collab</a>
+        <a href="https://www.youtube.com/playlist?list=PLtqCjZrUdnGvjatUB2UC0nJ3-hRmWW9e4&jct=4V55jyeBdcYK0WPOZ0mIvQ" class="btn yt-btn"><i class="fas fa-share-alt"></i> Me & Shirt Shared</a>
+        <a href="https://www.youtube.com/playlist?list=PLtqCjZrUdnGuNVQ5d_352-pMUlqg-PDpX" class="btn yt-btn"><i class="fas fa-heart"></i> Self-Help</a>
+        <a href="https://www.youtube.com/playlist?list=PLtqCjZrUdnGvui8_UYmrtAOk59-ZJuH1U" class="btn yt-btn"><i class="fas fa-laptop-code"></i> Computer Science</a>
       </div>
     </div>
 
     <div class="section">
-      <h2>Study</h2>
-      <div class="link-group">
-        <a class="resource-link" href="https://4gybdj-my.sharepoint.com/:f:/g/personal/nityanand_4gybdj_onmicrosoft_com/Enc-7P9QCNFOkBzEvBkZYVUBaVN5Yx20LzeXnRzhssyVNw?e=rxcnbL" target="_blank">
-          <span>Books</span>
-        </a>
-        <a class="resource-link" href="https://4gybdj-my.sharepoint.com/:f:/g/personal/nityanand_4gybdj_onmicrosoft_com/EgFj6RsUb3ZHhZ6_8JaVtXYBQfxIY50dPn_35LcblAU_WA?e=jigzie" target="_blank">
-          <span>Audiobooks</span>
-        </a>
-        <a class="resource-link" href="https://4gybdj-my.sharepoint.com/:f:/g/personal/nityanand_4gybdj_onmicrosoft_com/EtWcxwlw0-xPuwGUOJfE8BgBVmXZWv8308f0fzjMq0MLfw?e=35KgNk" target="_blank">
-          <span>CEH Complete Course</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Entertainment</h2>
-      <div class="link-group">
-        <a class="resource-link" href="https://4gybdj-my.sharepoint.com/:f:/g/personal/nityanand_4gybdj_onmicrosoft_com/EoeCGV4DBRFGtMohsFNEwLsBXVM-qTpq87jS2691c_dPoQ?e=zTfTvj" target="_blank">
-          <span>Ample</span>
-        </a>
-        <a class="resource-link" href="https://4gybdj-my.sharepoint.com/:f:/g/personal/nityanand_4gybdj_onmicrosoft_com/EtpynUiFHQdKhPpbt4AJdS0BqDws2nlO8A-3J2idtXckHg?e=PIn0UX" target="_blank">
-          <span>Ample - 02</span>
-        </a>
+      <h2>Secure Document</h2>
+      <div class="buttons">
+        <a href="https://cryptpad.fr/drive/#/2/drive/view/s31ROeWEVg0ObdZpc52omeKhefkuQVHre96k+QcRkOw/p/" class="btn doc-btn"><i class="fas fa-file-alt"></i> Go to Harsh Docs</a>
       </div>
     </div>
   </div>
