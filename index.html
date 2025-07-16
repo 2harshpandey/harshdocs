@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Harsh's Resource Hub</title>
+  <link rel="preload" as="image" href="./background.webp" type="image/webp">
+  <meta name="robots" content="noindex, nofollow">
   <style>
     * {
       box-sizing: border-box;
@@ -11,13 +13,24 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('./background.webp') no-repeat center center fixed;
-      background-size: cover;
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: 100dvh;
       padding: 2rem 1rem;
+      position: relative;
+      z-index: 0;
+    }
+    body::before {
+      content: "";
+      background: url('./background.webp') no-repeat center center fixed;
+      background-size: cover;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
     }
     .container {
       background: rgba(0, 0, 0, 0.7);
@@ -88,7 +101,6 @@
       }
     }
   </style>
-  <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
   <div class="container">
